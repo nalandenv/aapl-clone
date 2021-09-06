@@ -1,0 +1,25 @@
+{
+  "name": "apple-clone",
+  "version": "0.0.1",
+  "description": "Apple website iPhone 12 pro landing page clone.",
+  "main": "index.html",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "watch-sass": "sass --watch ./public/stylesheets/scss/main.scss ./public/stylesheets/css/main.css"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/nalandenv/aapl-clone.git"
+  },
+  "keywords": [
+    "apple",
+    "iphone",
+    "12pro"
+  ],
+  "author": "Nikhil Nalande",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/nalandenv/aapl-clone/issues"
+  },
+  "homepage": "https://github.com/nalandenv/aapl-clone#readme"
+}
