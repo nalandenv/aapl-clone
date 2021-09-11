@@ -1,7 +1,134 @@
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+@font-face {
+  font-family: "sfRegular";
+  src: url("/public/assets/fonts/sfRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfHeavy";
+  src: url("/public/assets/fonts/sfHeavy.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfSemiBold";
+  src: url("/public/assets/fonts/sfSemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfProIcons";
+  src: url("/public/assets/fonts/sfProIcons.woff2") format("woff2");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+.container header .locale-selector-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  height: 70px;
+  background-color: #444;
+  color: #fff;
+}
+.container header .locale-selector-container .locale-selector {
+  font-family: sfRegular;
+  max-width: 980px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 17px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+.container header .locale-selector-container .locale-selector .locale-left {
+  display: flex;
+  flex-direction: row;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.011em;
+  padding-right: 2%;
+  align-items: center;
+  flex: 1;
+  font-smooth: always;
+}
+.container header .locale-selector-container .locale-selector .locale-right {
+  display: flex;
+  flex-direction: row;
+  font-family: inherit;
+  flex: 1;
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box {
+  border: 1px solid #707070;
+  border-radius: 4px;
+  padding: 0 15px;
+  background-color: #575757;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 17px;
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box .icon {
+  font-family: sfProIcons;
+  color: #999;
+  font-size: 20px;
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box .icon-checkmark::after {
+  content: "\f30b";
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box .icon-dropdown::after {
+  content: "\f303";
+  float: right;
+}
+.container header .locale-selector-container .locale-selector .locale-right .btn-continue {
+  margin-left: 17px;
+  font-size: 17px;
+  font-family: sfRegular;
+  font-weight: 500;
+  color: white;
+  line-height: 1.52947;
+  letter-spacing: 0.021em;
+  background: linear-gradient(#42a1ec, #0070c9);
+  border: 1px solid #07c;
+  padding: 3px 15px 4px 15px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container header .locale-selector-container .locale-selector .locale-right .btn-continue:hover {
+  background: linear-gradient(#51a9ee, #147bcd);
+}
+.container header .locale-selector-container .locale-selector .locale-right .exit {
+  font-family: sfProIcons;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 20px;
+  color: #999;
+  display: block;
+  width: auto;
+  height: 20px;
+  margin: auto 0;
+  margin-left: 17px;
+}
+.container header .locale-selector-container .locale-selector .locale-right .exit::after {
+  content: "\f35e";
 }
 
 /*# sourceMappingURL=main.css.map */

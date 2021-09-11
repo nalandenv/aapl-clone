@@ -1,5 +1,109 @@
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+@mixin locale-selector {
+  .locale-selector-container {
+    @include mixins.row;
+    align-items: center;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 70px;
+    background-color: vars.$locale-bg-grey;
+    color: vars.$white;
+    .locale-selector {
+      font-family: vars.$font-reg;
+      max-width: 980px;
+      width: 100%;
+      margin: 0 auto;
+      padding: 0 17px;
+      @include mixins.row;
+      flex: 1;
+      .locale-left {
+        @include mixins.row;
+        font-family: inherit;
+        font-size: 13px;
+        line-height: 1.5;
+        letter-spacing: 0.011em;
+        padding-right: 2%;
+        align-items: center;
+        flex: 1;
+        font-smooth: always;
+      }
+      .locale-right {
+        @include mixins.row;
+        font-family: inherit;
+        flex: 1;
+        .select-box {
+          border: 1px solid vars.$border-locale;
+          border-radius: 4px;
+          padding: 0 15px;
+          background-color: vars.$bg-locale-select;
+          width: 100%;
+          height: 35px;
+          line-height: 35px;
+          font-size: 17px;
+          select {
+            font-family: inherit;
+            font-size: inherit;
+            color: inherit;
+            border: none;
+            background: none;
+            outline: none;
+            -webkit-appearance: none;
+            -moz-appearance: none;
+            text-indent: 1px;
+            text-overflow: "";
+          }
+          .icon {
+            font-family: vars.$icons;
+            color: vars.$icon-color;
+            font-size: 20px;
+            &-checkmark::after {
+              content: "";
+            }
+            &-dropdown::after {
+              content: "";
+              float: right;
+            }
+          }
+        }
+        .btn-continue {
+          margin-left: 17px;
+          font-size: 17px;
+          font-family: vars.$font-reg;
+          font-weight: 500;
+          color: white;
+          line-height: 1.52947;
+          letter-spacing: 0.021em;
+          background: linear-gradient(vars.$blue-lighter, vars.$blue-light);
+          border: 1px solid vars.$border-blue;
+          padding: 3px 15px 4px 15px;
+          text-align: center;
+          border-radius: 4px;
+          cursor: pointer;
+          &:hover {
+            background: linear-gradient(#51a9ee, #147bcd);
+          }
+        }
+        .exit {
+          font-family: vars.$icons;
+          cursor: pointer;
+          background: none;
+          border: none;
+          font-size: 20px;
+          line-height: 20px;
+          color: vars.$icon-color;
+          display: block;
+          width: auto;
+          height: 20px;
+          margin: auto 0;
+          margin-left: 17px;
+          &::after {
+            content: "";
+          }
+        }
+      }
+    }
+  }
 }
