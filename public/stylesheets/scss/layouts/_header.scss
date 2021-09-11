@@ -1,4 +1,5 @@
-@use "../components/_localeSelector" as localeSelectorMixin;
+@use "../components/localeSelector" as localeSelectorMixin;
+@use "../components/navbar" as navbar;
 * {
   box-sizing: border-box;
   margin: 0;
@@ -8,6 +9,8 @@
 }
 .container {
   header {
+    position: relative;
     @include localeSelectorMixin.locale-selector;
+    @include navbar.navbar;
   }
 }

@@ -22,12 +22,13 @@
   -moz-osx-font-smoothing: grayscale;
 }
 
+.container header {
+  position: relative;
+}
 .container header .locale-selector-container {
   display: flex;
   flex-direction: row;
   align-items: center;
-  position: absolute;
-  top: 0;
   width: 100%;
   height: 70px;
   background-color: #444;
@@ -129,6 +130,72 @@
 }
 .container header .locale-selector-container .locale-selector .locale-right .exit::after {
   content: "\f35e";
+}
+.container header nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  margin: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 48px;
+  max-height: 44px;
+  font-size: 17px;
+}
+.container header nav .navbar-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding: 0 22px;
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+.container header nav .navbar-container .nav-link {
+  height: 44px;
+  padding: 0 10px;
+}
+.container header nav .navbar-container .nav-link a {
+  display: inline-block;
+  opacity: 0.8;
+}
+.container header nav .navbar-container .nav-link a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.container header nav .navbar-container .nav-link #search-bar {
+  background: url("/public/assets/images/searchIcon.svg");
+  background-repeat: no-repeat;
+  height: 44px;
+  width: 16px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  caret-color: none;
+}
+.container header nav .navbar-container .nav-link #search-bar::placeholder {
+  opacity: 0;
+}
+.container header nav .navbar-container .nav-link #search-bar:focus {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background: url("/public/assets/images/searchIconDark.svg"), url("/public/assets/images/appleIcon.svg");
+  background-repeat: no-repeat;
+  background-position: 17%, 81%;
+  background-color: black;
+  z-index: 9;
+  padding-left: 20%;
+  caret-color: #444;
+  color: #fff;
+  transition: width 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.container header nav .navbar-container .nav-link #search-bar:focus::placeholder {
+  opacity: 1;
+}
+
+body {
+  background-color: black;
 }
 
 /*# sourceMappingURL=main.css.map */
