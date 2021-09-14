@@ -1,0 +1,43 @@
+@use "../abstracts/variables" as vars;
+@mixin ribbon-wrapper {
+  .ribbon-wrapper {
+    font-family: vars.$font-reg;
+    width: 100%;
+    padding: 0.8em 0;
+    background-color: #1d1d1f;
+    color: white;
+    .ribbon {
+      font-size: 12px;
+      p {
+        margin: 0 auto;
+        width: fit-content;
+        a {
+          color: vars.$blue-lighter;
+          &::after {
+            font-family: vars.$icons;
+            content: "";
+          }
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+    animation: drop 2.5s;
+  }
+  @keyframes drop {
+    0% {
+      margin-top: -50px;
+      opacity: 0;
+      background-color: vars.$blue-light;
+    }
+    35% {
+      margin-top: 0px;
+      background-color: vars.$blue-light;
+    }
+    70% {
+      margin-top: 0px;
+      background-color: vars.$blue-light;
+    }
+  }
+}

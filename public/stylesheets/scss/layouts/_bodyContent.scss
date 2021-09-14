@@ -1,9 +1,11 @@
 @use "../components/productNav" as productNavbar;
 @use "../components/hero" as hero;
+@use "../components/ribbon" as ribbon;
 .body-content {
   .product-nav {
     @include productNavbar.productNav;
   }
+  @include ribbon.ribbon-wrapper;
   .section-hero {
     @include hero.hero;
   }

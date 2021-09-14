@@ -291,6 +291,46 @@
   color: #fff;
   background-color: #2997ff;
 }
+.body-content .ribbon-wrapper {
+  font-family: sfRegular;
+  width: 100%;
+  padding: 0.8em 0;
+  background-color: #1d1d1f;
+  color: white;
+  animation: drop 2.5s;
+}
+.body-content .ribbon-wrapper .ribbon {
+  font-size: 12px;
+}
+.body-content .ribbon-wrapper .ribbon p {
+  margin: 0 auto;
+  width: fit-content;
+}
+.body-content .ribbon-wrapper .ribbon p a {
+  color: #42a1ec;
+}
+.body-content .ribbon-wrapper .ribbon p a::after {
+  font-family: sfProIcons;
+  content: "\f301";
+}
+.body-content .ribbon-wrapper .ribbon p a:hover {
+  text-decoration: underline;
+}
+@keyframes drop {
+  0% {
+    margin-top: -50px;
+    opacity: 0;
+    background-color: #0070c9;
+  }
+  35% {
+    margin-top: 0px;
+    background-color: #0070c9;
+  }
+  70% {
+    margin-top: 0px;
+    background-color: #0070c9;
+  }
+}
 .body-content .section-hero {
   width: 980px;
   margin: 0 auto;
