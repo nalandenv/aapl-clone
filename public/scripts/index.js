@@ -24,3 +24,16 @@ contBtn.addEventListener("click", () => {
   console.log("continue btn clicked");
   hideLocaleSelector();
 });
+
+const checkpoint = 500;
+
+window.addEventListener("scroll", () => {
+  const currentScroll = window.pageYOffset;
+  if (currentScroll <= checkpoint) {
+    console.log(currentScroll);
+    opacity = 0 + currentScroll / checkpoint;
+  } else {
+    opacity = 1;
+  }
+  document.querySelector(".hero-info").style.opacity = opacity;
+});
