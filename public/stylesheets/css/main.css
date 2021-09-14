@@ -1,7 +1,299 @@
-div {
-  width: 100px;
-  height: 100px;
-  background-color: red;
+@font-face {
+  font-family: "sfRegular";
+  src: url("/public/assets/fonts/sfRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfHeavy";
+  src: url("/public/assets/fonts/sfHeavy.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfSemiBold";
+  src: url("/public/assets/fonts/sfSemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfProIcons";
+  src: url("/public/assets/fonts/sfProIcons.woff2") format("woff2");
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+}
+
+.container header {
+  position: relative;
+}
+.container header .locale-selector-container {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: 100%;
+  height: 70px;
+  background-color: #444;
+  color: #fff;
+}
+.container header .locale-selector-container .locale-selector {
+  font-family: sfRegular;
+  max-width: 1014px;
+  width: 100%;
+  margin: 0 auto;
+  padding: 0 17px;
+  display: flex;
+  flex-direction: row;
+  flex: 1;
+}
+.container header .locale-selector-container .locale-selector .locale-left {
+  display: flex;
+  flex-direction: row;
+  font-family: inherit;
+  font-size: 13px;
+  line-height: 1.5;
+  letter-spacing: 0.011em;
+  padding-right: 2%;
+  align-items: center;
+  flex: 1;
+  font-smooth: always;
+}
+.container header .locale-selector-container .locale-selector .locale-right {
+  display: flex;
+  flex-direction: row;
+  font-family: inherit;
+  flex: 1;
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box {
+  border: 1px solid #707070;
+  border-radius: 4px;
+  padding: 0 15px;
+  background-color: #575757;
+  width: 100%;
+  height: 35px;
+  line-height: 35px;
+  font-size: 17px;
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box select {
+  font-family: inherit;
+  font-size: inherit;
+  color: inherit;
+  border: none;
+  background: none;
+  outline: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  text-indent: 1px;
+  text-overflow: "";
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box .icon {
+  font-family: sfProIcons;
+  color: #999;
+  font-size: 20px;
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box .icon-checkmark::after {
+  content: "\f30b";
+}
+.container header .locale-selector-container .locale-selector .locale-right .select-box .icon-dropdown::after {
+  content: "\f303";
+  float: right;
+}
+.container header .locale-selector-container .locale-selector .locale-right .btn-continue {
+  margin-left: 17px;
+  font-size: 17px;
+  font-family: sfRegular;
+  font-weight: 500;
+  color: white;
+  line-height: 1.52947;
+  letter-spacing: 0.021em;
+  background: linear-gradient(#42a1ec, #0070c9);
+  border: 1px solid #07c;
+  padding: 3px 15px 4px 15px;
+  text-align: center;
+  border-radius: 4px;
+  cursor: pointer;
+}
+.container header .locale-selector-container .locale-selector .locale-right .btn-continue:hover {
+  background: linear-gradient(#51a9ee, #147bcd);
+}
+.container header .locale-selector-container .locale-selector .locale-right .exit {
+  font-family: sfProIcons;
+  cursor: pointer;
+  background: none;
+  border: none;
+  font-size: 20px;
+  line-height: 20px;
+  color: #999;
+  display: block;
+  width: auto;
+  height: 20px;
+  margin: auto 0;
+  margin-left: 17px;
+}
+.container header .locale-selector-container .locale-selector .locale-right .exit::after {
+  content: "\f35e";
+}
+.container header nav {
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  margin: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 48px;
+  max-height: 44px;
+  font-size: 17px;
+}
+.container header nav .navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 22px;
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+}
+.container header nav .navbar-container .link-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+.container header nav .navbar-container .link-container .nav-link {
+  height: 44px;
+  padding: 0 10px;
+  width: fit-content;
+}
+.container header nav .navbar-container .link-container .nav-link a {
+  display: inline-block;
+  opacity: 0.8;
+}
+.container header nav .navbar-container .link-container .nav-link a:hover {
+  opacity: 1;
+  cursor: pointer;
+}
+.container header nav .navbar-container .link-container .nav-link #search-bar {
+  background: url("/public/assets/images/searchIcon.svg");
+  background-repeat: no-repeat;
+  height: 44px;
+  width: 16px;
+  border: none;
+  outline: none;
+  font-size: 17px;
+  caret-color: none;
+}
+.container header nav .navbar-container .link-container .nav-link #search-bar::placeholder {
+  opacity: 0;
+}
+.container header nav .navbar-container .link-container .nav-link #search-bar:focus {
+  position: absolute;
+  right: 0;
+  width: 100%;
+  background: url("/public/assets/images/searchIconDark.svg"), url("/public/assets/images/appleIcon.svg");
+  background-repeat: no-repeat;
+  background-position: 17%, 81%;
+  background-color: black;
+  z-index: 9;
+  padding-left: 20%;
+  caret-color: #444;
+  color: #fff;
+  transition: width 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
+}
+.container header nav .navbar-container .link-container .nav-link #search-bar:focus::placeholder {
+  opacity: 1;
+}
+
+.body-content .product-nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  margin: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 48px;
+  max-height: 44px;
+  font-size: 17px;
+  font-family: sfSemiBold;
+  color: #fff;
+  max-height: fit-content;
+  height: auto;
+}
+.body-content .product-nav .navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 22px;
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+  position: relative;
+}
+.body-content .product-nav .navbar-container .product-title {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.14286;
+  letter-spacing: 0.011em;
+  margin: 14px 0 -14px;
+  height: 52px;
+}
+.body-content .product-nav .navbar-container .product-title a {
+  color: #fff;
+}
+.body-content .product-nav .navbar-container .product-menu {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-top: -3px;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray {
+  padding-top: 18px;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a {
+  margin-left: 24px;
+  color: #fff;
+  opacity: 0.88;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a:hover {
+  color: #2997ff;
+  opacity: 1;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a:first-child {
+  opacity: 0.56;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a:first-child:hover {
+  color: #fff;
+  cursor: default;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray .btn-buy {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background: #0070c9;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  min-width: 23px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 12px;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray .btn-buy:hover {
+  color: #fff;
+  background-color: #2997ff;
+}
+
+body {
+  background-color: black;
 }
 
 /*# sourceMappingURL=main.css.map */

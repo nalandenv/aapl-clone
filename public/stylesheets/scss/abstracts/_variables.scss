@@ -1,1 +1,31 @@
-@import url(https://fonts.googleapis.com/css?family=Roboto:100,regular,italic,500,500italic,700);
+@font-face {
+  font-family: "sfRegular";
+  src: url("/public/assets/fonts/sfRegular.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfHeavy";
+  src: url("/public/assets/fonts/sfHeavy.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfSemiBold";
+  src: url("/public/assets/fonts/sfSemiBold.woff2") format("woff2");
+}
+@font-face {
+  font-family: "sfProIcons";
+  src: url("/public/assets/fonts/sfProIcons.woff2") format("woff2");
+}
+
+$font-reg: sfRegular;
+$font-heavy: sfHeavy;
+$font-semi-bold: sfSemiBold;
+$icons: sfProIcons;
+// colors
+$white: #fff;
+$locale-bg-grey: #444;
+$border-locale: #707070;
+$bg-locale-select: #575757;
+$icon-color: #999;
+$blue-lighter: #42a1ec;
+$blue-light: #0070c9;
+$border-blue: #07c;
+$menu-hover-blue: #2997ff;

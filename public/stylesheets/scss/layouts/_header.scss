@@ -1,1 +1,17 @@
-@use "../components/localeSelector";
+@use "../components/localeSelector" as localeSelectorMixin;
+@use "../components/navbar" as navbar;
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
+}
+.container {
+  header {
+    position: relative;
+    @include localeSelectorMixin.locale-selector;
+    @include navbar.navbar;
+  }
+}
