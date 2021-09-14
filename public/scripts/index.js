@@ -17,7 +17,6 @@ closeBtn.addEventListener("click", () => {
 const country = document.querySelector("#country");
 const locSt = localStorage.getItem("country");
 if (locSt) {
-  console.log(locSt);
   hideLocaleSelector();
 }
 contBtn.addEventListener("click", () => {

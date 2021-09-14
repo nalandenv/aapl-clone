@@ -4,11 +4,13 @@
 @mixin productNav {
   position: sticky;
   top: 0;
+  backdrop-filter: saturate(180%) blur(20px);
   @include mixins.nav;
   font-family: vars.$font-semi-bold;
   color: vars.$white;
   max-height: fit-content;
   height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
   .navbar-container {
     @include mixins.navContainer;
     position: relative;

@@ -207,6 +207,7 @@
 .body-content .product-nav {
   position: sticky;
   top: 0;
+  backdrop-filter: saturate(180%) blur(20px);
   background-color: rgba(0, 0, 0, 0.8);
   z-index: 9999;
   margin: 0;
@@ -219,6 +220,7 @@
   color: #fff;
   max-height: fit-content;
   height: auto;
+  background-color: rgba(0, 0, 0, 0.7);
 }
 .body-content .product-nav .navbar-container {
   display: flex;
