@@ -20,6 +20,7 @@
   padding: 0;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  text-decoration: none;
 }
 
 .container header {
@@ -36,7 +37,7 @@
 }
 .container header .locale-selector-container .locale-selector {
   font-family: sfRegular;
-  max-width: 980px;
+  max-width: 1014px;
   width: 100%;
   margin: 0 auto;
   padding: 0 17px;
@@ -142,28 +143,37 @@
   font-size: 17px;
 }
 .container header nav .navbar-container {
-  max-width: 980px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1024px;
   margin: 0 auto;
   padding: 0 22px;
   position: relative;
   z-index: 2;
-  display: flex;
-  flex-direction: row;
   justify-content: space-between;
 }
-.container header nav .navbar-container .nav-link {
+.container header nav .navbar-container .link-container {
+  display: flex;
+  flex-direction: row;
+  width: 100%;
+  justify-content: space-between;
+  margin: 0 -10px;
+}
+.container header nav .navbar-container .link-container .nav-link {
   height: 44px;
   padding: 0 10px;
+  width: fit-content;
 }
-.container header nav .navbar-container .nav-link a {
+.container header nav .navbar-container .link-container .nav-link a {
   display: inline-block;
   opacity: 0.8;
 }
-.container header nav .navbar-container .nav-link a:hover {
+.container header nav .navbar-container .link-container .nav-link a:hover {
   opacity: 1;
   cursor: pointer;
 }
-.container header nav .navbar-container .nav-link #search-bar {
+.container header nav .navbar-container .link-container .nav-link #search-bar {
   background: url("/public/assets/images/searchIcon.svg");
   background-repeat: no-repeat;
   height: 44px;
@@ -173,10 +183,10 @@
   font-size: 17px;
   caret-color: none;
 }
-.container header nav .navbar-container .nav-link #search-bar::placeholder {
+.container header nav .navbar-container .link-container .nav-link #search-bar::placeholder {
   opacity: 0;
 }
-.container header nav .navbar-container .nav-link #search-bar:focus {
+.container header nav .navbar-container .link-container .nav-link #search-bar:focus {
   position: absolute;
   right: 0;
   width: 100%;
@@ -190,8 +200,96 @@
   color: #fff;
   transition: width 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
 }
-.container header nav .navbar-container .nav-link #search-bar:focus::placeholder {
+.container header nav .navbar-container .link-container .nav-link #search-bar:focus::placeholder {
   opacity: 1;
+}
+
+.body-content .product-nav {
+  position: sticky;
+  top: 0;
+  background-color: rgba(0, 0, 0, 0.8);
+  z-index: 9999;
+  margin: 0;
+  width: 100%;
+  min-width: 1024px;
+  height: 48px;
+  max-height: 44px;
+  font-size: 17px;
+  font-family: sfSemiBold;
+  color: #fff;
+  max-height: fit-content;
+  height: auto;
+}
+.body-content .product-nav .navbar-container {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  max-width: 1024px;
+  margin: 0 auto;
+  padding: 0 22px;
+  position: relative;
+  z-index: 2;
+  justify-content: space-between;
+  position: relative;
+}
+.body-content .product-nav .navbar-container .product-title {
+  font-size: 21px;
+  font-weight: 600;
+  line-height: 1.14286;
+  letter-spacing: 0.011em;
+  margin: 14px 0 -14px;
+  height: 52px;
+}
+.body-content .product-nav .navbar-container .product-title a {
+  color: #fff;
+}
+.body-content .product-nav .navbar-container .product-menu {
+  font-size: 12px;
+  line-height: 1;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  margin-top: -3px;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray {
+  padding-top: 18px;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a {
+  margin-left: 24px;
+  color: #fff;
+  opacity: 0.88;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a:hover {
+  color: #2997ff;
+  opacity: 1;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a:first-child {
+  opacity: 0.56;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray a:first-child:hover {
+  color: #fff;
+  cursor: default;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray .btn-buy {
+  cursor: pointer;
+  display: inline-block;
+  text-align: center;
+  white-space: nowrap;
+  background: #0070c9;
+  color: #fff;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  min-width: 23px;
+  padding-left: 11px;
+  padding-right: 11px;
+  padding-top: 4px;
+  padding-bottom: 4px;
+  border-radius: 12px;
+}
+.body-content .product-nav .navbar-container .product-menu .menu-tray .btn-buy:hover {
+  color: #fff;
+  background-color: #2997ff;
 }
 
 body {

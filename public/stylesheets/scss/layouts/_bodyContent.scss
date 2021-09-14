@@ -1,0 +1,7 @@
+@use "../components/productNav" as productNavbar;
+
+.body-content {
+  .product-nav {
+    @include productNavbar.productNav;
+  }
+}

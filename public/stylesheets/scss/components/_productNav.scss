@@ -1,0 +1,75 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+@mixin productNav {
+  position: sticky;
+  top: 0;
+  @include mixins.nav;
+  font-family: vars.$font-semi-bold;
+  color: vars.$white;
+  max-height: fit-content;
+  height: auto;
+  .navbar-container {
+    @include mixins.navContainer;
+    position: relative;
+    .product-title {
+      font-size: 21px;
+      font-weight: 600;
+      line-height: 1.14286;
+      letter-spacing: 0.011em;
+      margin: 14px 0 -14px;
+      height: 52px;
+      a {
+        color: vars.$white;
+      }
+    }
+    .product-menu {
+      font-size: 12px;
+      line-height: 1;
+      font-weight: 400;
+      letter-spacing: -0.01em;
+      margin-top: -3px;
+      .menu-tray {
+        padding-top: 18px;
+        a {
+          margin-left: 24px;
+          color: vars.$white;
+          opacity: 0.88;
+          &:hover {
+            color: vars.$menu-hover-blue;
+            opacity: 1;
+          }
+          &:first-child {
+            opacity: 0.56;
+            &:hover {
+              color: vars.$white;
+              cursor: default;
+            }
+          }
+        }
+        .btn-buy {
+          cursor: pointer;
+          display: inline-block;
+          text-align: center;
+          white-space: nowrap;
+          background: vars.$blue-light;
+          color: vars.$white;
+          font-size: 12px;
+          line-height: 1.33337;
+          font-weight: 400;
+          letter-spacing: -0.01em;
+          min-width: 23px;
+          padding-left: 11px;
+          padding-right: 11px;
+          padding-top: 4px;
+          padding-bottom: 4px;
+          border-radius: 12px;
+          &:hover {
+            color: vars.$white;
+            background-color: vars.$menu-hover-blue;
+          }
+        }
+      }
+    }
+  }
+}
