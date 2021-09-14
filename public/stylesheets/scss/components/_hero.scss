@@ -1,0 +1,65 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+@mixin hero {
+  width: 980px;
+  margin: 0 auto;
+  font-family: vars.$font-semi-bold;
+  .hero-heading {
+    padding-top: 72px;
+    text-align: center;
+    color: vars.$hero-color;
+    position: relative;
+    h1 {
+      font-size: 21px;
+      line-height: 1.19048;
+      letter-spacing: 0.011em;
+      font-weight: 600;
+    }
+    h2 {
+      margin-top: 12px;
+      font-size: 80px;
+      line-height: 1.05;
+      font-weight: 600;
+      letter-spacing: -0.015em;
+    }
+    opacity: 1;
+    .grad {
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 5px;
+      background: rgba(0, 0, 0, 0);
+      animation: grad 4s;
+    }
+  }
+  @keyframes grad {
+    0% {
+      background: linear-gradient(270deg, #000000 80%, transparent 100%);
+    }
+    70% {
+      background: linear-gradient(270deg, #000000 80%, transparent 100%);
+    }
+    80% {
+      background: linear-gradient(270deg, #000000 75%, transparent 100%);
+    }
+    $count: 70;
+    $transparent: 100;
+    @for $i from 81 through 100 {
+      #{$i}% {
+        @if ($i >= 90) {
+          $transparent: $transparent - 10;
+        }
+        background: linear-gradient(
+          270deg,
+          #000000 #{$count}+ "%",
+          transparent #{$transparent}+ "%"
+        );
+      }
+      $count: $count - 3.5;
+    }
+  }
+  .hero-display {
+    margin-top: -40px;
+  }
+}

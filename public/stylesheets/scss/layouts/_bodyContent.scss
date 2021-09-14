@@ -1,7 +1,10 @@
 @use "../components/productNav" as productNavbar;
-
+@use "../components/hero" as hero;
 .body-content {
   .product-nav {
     @include productNavbar.productNav;
+  }
+  .section-hero {
+    @include hero.hero;
   }
 }
