@@ -76,4 +76,39 @@
       margin: 0 auto;
     }
   }
+  .gradient-back {
+    width: 45%;
+    margin: 0 auto;
+    margin-top: 50px;
+    h4 {
+      text-align: center;
+      font-size: 32px;
+      line-height: 1.125;
+      background: linear-gradient(to right, #005e7f, #61b6cd);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+    div {
+      background: linear-gradient(to right, #005e7f, #61b6cd);
+      border-radius: 50px;
+      width: fit-content;
+      margin: 6px auto;
+      margin-top: 35px;
+      padding: 1.5px;
+      #foh {
+        background: black;
+        color: white;
+        font-size: 16px;
+        border: none;
+        border-radius: 50px;
+        padding: 8px 16px;
+        transition: all 0.2s linear;
+        &:hover {
+          color: black;
+          background-color: white;
+          cursor: pointer;
+        }
+      }
+    }
+  }
 }

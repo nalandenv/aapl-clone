@@ -37,3 +37,11 @@ window.addEventListener("scroll", () => {
   }
   document.querySelector(".hero-info").style.opacity = opacity;
 });
+
+const drop = document.querySelectorAll(".drop");
+for (const i of drop) {
+  i.addEventListener("click", (e) => {
+    e.preventDefault();
+    i.childNodes[3].classList.toggle("hidden");
+  });
+}

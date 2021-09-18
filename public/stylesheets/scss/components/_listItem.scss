@@ -1,8 +1,6 @@
 @use "../abstracts/variables" as vars;
 
 @mixin list-item {
-  visibility: hidden;
-  opacity: 0;
   background-color: rgb(245, 245, 247);
   position: absolute;
   top: 44px;
