@@ -1,0 +1,77 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+@mixin buyOptions {
+  padding-top: 126px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #424245;
+  .row-first {
+    width: 980px;
+    margin: 0 auto;
+    font-family: vars.$font-reg;
+    color: white;
+    div {
+      display: flex;
+      flex-direction: row;
+    }
+    h2 {
+      display: block;
+      font-size: 56px;
+      width: 66.67%;
+      text-align: center;
+      margin: 0 auto;
+    }
+    .col1 {
+      text-align: center;
+      flex: 1;
+      margin: 0 auto;
+      margin-top: 93px;
+      font-family: inherit;
+      .block {
+        display: block;
+        h3 {
+          max-width: 90%;
+          font-size: 32px;
+          line-height: 1.125;
+          font-weight: 600;
+          letter-spacing: 0.004em;
+          margin: 0 auto;
+        }
+        p {
+          max-width: 75%;
+          color: #a1a1a6;
+          margin: 0 auto;
+          margin-top: 0.8em;
+          font-size: 17px;
+          line-height: 1.47059;
+          font-weight: 400;
+          letter-spacing: -0.022em;
+          a {
+            color: inherit;
+            sup {
+              font-size: 12px;
+            }
+            &:hover {
+              color: vars.$blue-lighter;
+            }
+          }
+          .learn {
+            color: vars.$border-blue;
+            &:hover {
+              text-decoration: underline;
+              color: vars.$border-blue;
+            }
+          }
+          span {
+            font-family: vars.$icons;
+            padding-left: 5px;
+            color: vars.$border-blue;
+            &::after {
+              content: "";
+            }
+          }
+        }
+      }
+    }
+  }
+}

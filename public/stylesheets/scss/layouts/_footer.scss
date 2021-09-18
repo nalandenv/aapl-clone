@@ -1,0 +1,7 @@
+@use "../components/buyOptions" as buyOptions;
+footer {
+  background: #111;
+  .section-top {
+    @include buyOptions.buyOptions;
+  }
+}

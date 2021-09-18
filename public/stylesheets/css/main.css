@@ -216,6 +216,7 @@
   padding: 8px 0;
   display: flex;
   justify-content: center;
+  z-index: 1000;
 }
 .container header nav .navbar-container .link-container .nav-link .list-container div {
   max-width: 1100px;
@@ -276,6 +277,7 @@
   max-height: fit-content;
   height: auto;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
 }
 .body-content .product-nav .navbar-container {
   display: flex;
@@ -526,7 +528,7 @@
   background: linear-gradient(to right, #005e7f, #61b6cd);
   border-radius: 50px;
   width: fit-content;
-  margin: 6px auto;
+  margin: 70px auto;
   margin-top: 35px;
   padding: 1.5px;
 }
@@ -543,6 +545,84 @@
   color: black;
   background-color: white;
   cursor: pointer;
+}
+
+footer {
+  background: #111;
+}
+footer .section-top {
+  padding-top: 126px;
+  padding-bottom: 100px;
+  border-bottom: 1px solid #424245;
+}
+footer .section-top .row-first {
+  width: 980px;
+  margin: 0 auto;
+  font-family: sfRegular;
+  color: white;
+}
+footer .section-top .row-first div {
+  display: flex;
+  flex-direction: row;
+}
+footer .section-top .row-first h2 {
+  display: block;
+  font-size: 56px;
+  width: 66.67%;
+  text-align: center;
+  margin: 0 auto;
+}
+footer .section-top .row-first .col1 {
+  text-align: center;
+  flex: 1;
+  margin: 0 auto;
+  margin-top: 93px;
+  font-family: inherit;
+}
+footer .section-top .row-first .col1 .block {
+  display: block;
+}
+footer .section-top .row-first .col1 .block h3 {
+  max-width: 90%;
+  font-size: 32px;
+  line-height: 1.125;
+  font-weight: 600;
+  letter-spacing: 0.004em;
+  margin: 0 auto;
+}
+footer .section-top .row-first .col1 .block p {
+  max-width: 75%;
+  color: #a1a1a6;
+  margin: 0 auto;
+  margin-top: 0.8em;
+  font-size: 17px;
+  line-height: 1.47059;
+  font-weight: 400;
+  letter-spacing: -0.022em;
+}
+footer .section-top .row-first .col1 .block p a {
+  color: inherit;
+}
+footer .section-top .row-first .col1 .block p a sup {
+  font-size: 12px;
+}
+footer .section-top .row-first .col1 .block p a:hover {
+  color: #42a1ec;
+}
+footer .section-top .row-first .col1 .block p .learn {
+  color: #07c;
+}
+footer .section-top .row-first .col1 .block p .learn:hover {
+  text-decoration: underline;
+  color: #07c;
+}
+footer .section-top .row-first .col1 .block p span {
+  font-family: sfProIcons;
+  padding-left: 5px;
+  color: #07c;
+}
+footer .section-top .row-first .col1 .block p span::after {
+  content: "\f301";
 }
 
 body {

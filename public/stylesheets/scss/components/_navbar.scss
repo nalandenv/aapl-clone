@@ -62,6 +62,7 @@
           .list-container {
             @include listItem.list-item;
             // visibility: hidden;
+            z-index: 1000;
           }
           &:hover {
             .list-container {

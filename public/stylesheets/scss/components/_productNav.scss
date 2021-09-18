@@ -11,6 +11,7 @@
   max-height: fit-content;
   height: auto;
   background-color: rgba(0, 0, 0, 0.7);
+  z-index: 999;
   .navbar-container {
     @include mixins.navContainer;
     position: relative;
