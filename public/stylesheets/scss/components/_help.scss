@@ -1,0 +1,57 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+@mixin help {
+  max-width: 980px;
+  margin: 0 auto;
+  .help-container {
+    display: flex;
+    flex-direction: row;
+    padding-bottom: 56px;
+    flex: 1;
+    border-bottom: 1px solid vars.$ft-border;
+    .help-card {
+      font-family: vars.$font-reg;
+      cursor: pointer;
+      color: vars.$hero-color;
+      text-align: center;
+      margin: 0 auto;
+      padding-top: 56px;
+      flex: 1;
+      img {
+        height: 56px;
+      }
+      h3 {
+        font-size: 19px;
+        line-height: 1.21053;
+        font-weight: 600;
+        letter-spacing: 0.012em;
+        margin-top: 0.525em;
+      }
+      p {
+        font-size: 14px;
+        margin-top: 0.4em;
+        line-height: 20px;
+      }
+      .learn {
+        margin-top: 0.8em;
+        @include mixins.learn;
+        &:hover {
+          text-decoration: none;
+        }
+        .tail {
+          font-family: vars.$icons;
+          padding-left: 5px;
+          &::after {
+            content: "";
+          }
+        }
+      }
+      &:hover {
+        .head {
+          text-decoration: underline;
+        }
+      }
+    }
+  }
+}

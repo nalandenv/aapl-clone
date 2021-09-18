@@ -552,14 +552,15 @@ footer {
 }
 footer .section-top {
   padding-top: 126px;
-  padding-bottom: 100px;
-  border-bottom: 1px solid #424245;
 }
 footer .section-top .row-first {
   width: 980px;
   margin: 0 auto;
   font-family: sfRegular;
-  color: white;
+  border-bottom: 1px solid #424245;
+  padding-bottom: 100px;
+  color: #f5f5f7;
+  flex: 1;
 }
 footer .section-top .row-first div {
   display: flex;
@@ -574,10 +575,10 @@ footer .section-top .row-first h2 {
 }
 footer .section-top .row-first .col1 {
   text-align: center;
-  flex: 1;
   margin: 0 auto;
   margin-top: 93px;
   font-family: inherit;
+  flex: 5;
 }
 footer .section-top .row-first .col1 .block {
   display: block;
@@ -607,22 +608,107 @@ footer .section-top .row-first .col1 .block p a sup {
   font-size: 12px;
 }
 footer .section-top .row-first .col1 .block p a:hover {
-  color: #42a1ec;
+  color: #2997ff;
 }
 footer .section-top .row-first .col1 .block p .learn {
-  color: #07c;
+  color: #2997ff;
 }
 footer .section-top .row-first .col1 .block p .learn:hover {
   text-decoration: underline;
-  color: #07c;
+  color: #2997ff;
 }
 footer .section-top .row-first .col1 .block p span {
   font-family: sfProIcons;
   padding-left: 5px;
-  color: #07c;
+  color: #2997ff;
 }
 footer .section-top .row-first .col1 .block p span::after {
   content: "\f301";
+}
+footer .section-top .row-first .col2 {
+  flex: none;
+  width: 50%;
+}
+footer .section-help {
+  max-width: 980px;
+  margin: 0 auto;
+}
+footer .section-help .help-container {
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 56px;
+  flex: 1;
+  border-bottom: 1px solid #424245;
+}
+footer .section-help .help-container .help-card {
+  font-family: sfRegular;
+  cursor: pointer;
+  color: #f5f5f7;
+  text-align: center;
+  margin: 0 auto;
+  padding-top: 56px;
+  flex: 1;
+}
+footer .section-help .help-container .help-card img {
+  height: 56px;
+}
+footer .section-help .help-container .help-card h3 {
+  font-size: 19px;
+  line-height: 1.21053;
+  font-weight: 600;
+  letter-spacing: 0.012em;
+  margin-top: 0.525em;
+}
+footer .section-help .help-container .help-card p {
+  font-size: 14px;
+  margin-top: 0.4em;
+  line-height: 20px;
+}
+footer .section-help .help-container .help-card .learn {
+  margin-top: 0.8em;
+  color: #2997ff;
+}
+footer .section-help .help-container .help-card .learn:hover {
+  text-decoration: underline;
+  color: #2997ff;
+}
+footer .section-help .help-container .help-card .learn:hover {
+  text-decoration: none;
+}
+footer .section-help .help-container .help-card .learn .tail {
+  font-family: sfProIcons;
+  padding-left: 5px;
+}
+footer .section-help .help-container .help-card .learn .tail::after {
+  content: "\f301";
+}
+footer .section-help .help-container .help-card:hover .head {
+  text-decoration: underline;
+}
+footer .footnote {
+  font-family: sfRegular;
+}
+footer .footnote .footnote-container {
+  max-width: 980px;
+  margin: 0 auto;
+  padding-bottom: 25px;
+  border-bottom: 1px solid #424245;
+}
+footer .footnote p {
+  padding-top: 25px;
+  font-size: 12px;
+  line-height: 1.33337;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+  color: #6e6e73;
+}
+footer .footnote p a {
+  color: #a1a1a6;
+}
+footer .footnote p a:hover {
+  cursor: pointer;
+  color: #f5f5f7;
+  text-decoration: underline;
 }
 
 body {

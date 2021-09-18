@@ -1,7 +1,15 @@
 @use "../components/buyOptions" as buyOptions;
+@use "../components/help" as help;
+@use "../components/footnote" as footnote;
 footer {
   background: #111;
   .section-top {
     @include buyOptions.buyOptions;
+  }
+  .section-help {
+    @include help.help;
+  }
+  .footnote {
+    @include footnote.footnote;
   }
 }

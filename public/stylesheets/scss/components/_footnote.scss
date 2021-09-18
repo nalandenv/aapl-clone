@@ -1,0 +1,28 @@
+@use "../abstracts/mixins" as mixins;
+@use "../abstracts/variables" as vars;
+
+@mixin footnote {
+  font-family: vars.$font-reg;
+  .footnote-container {
+    max-width: 980px;
+    margin: 0 auto;
+    padding-bottom: 25px;
+    border-bottom: 1px solid vars.$ft-border;
+  }
+  p {
+    padding-top: 25px;
+    font-size: 12px;
+    line-height: 1.33337;
+    font-weight: 400;
+    letter-spacing: -0.01em;
+    color: vars.$txt-footnote;
+    a {
+      color: vars.$footnote-link-color;
+      &:hover {
+        cursor: pointer;
+        color: vars.$hero-color;
+        text-decoration: underline;
+      }
+    }
+  }
+}
