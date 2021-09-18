@@ -1,6 +1,7 @@
 @use "../components/buyOptions" as buyOptions;
 @use "../components/help" as help;
 @use "../components/footnote" as footnote;
+@use "../components/footerLinks" as footerLinks;
 footer {
   background: #111;
   .section-top {
@@ -11,5 +12,11 @@ footer {
   }
   .footnote {
     @include footnote.footnote;
+  }
+  .footer-links {
+    @include footerLinks.footerLinks;
+  }
+  .footer-info {
+    @include footerLinks.footerInfo;
   }
 }
