@@ -47,7 +47,7 @@
     $transparent: 100;
     @for $i from 81 through 100 {
       #{$i}% {
-        @if ($i >= 90) {
+        @if ($i > 90) {
           $transparent: $transparent - 10;
         }
         background: linear-gradient(

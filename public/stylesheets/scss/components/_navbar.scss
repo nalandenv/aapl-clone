@@ -1,13 +1,17 @@
 @use "../abstracts/mixins" as mixins;
 @use "../abstracts/variables" as vars;
+@use "./listItem" as listItem;
 
 @mixin navbar {
   nav {
     @include mixins.nav;
+    position: relative;
     .navbar-container {
       @include mixins.navContainer;
+      position: static;
       .link-container {
         @include mixins.row;
+        position: static;
         width: 100%;
         justify-content: space-between;
         margin: 0 -10px;
@@ -37,21 +41,31 @@
             }
             &:focus {
               position: absolute;
-              right: 0;
-              width: 100%;
+              right: 50%;
+              transform: translateX(50%);
+              width: 980px;
               background: url("/public/assets/images/searchIconDark.svg"),
                 url("/public/assets/images/appleIcon.svg");
               background-repeat: no-repeat;
-              background-position: 17%, 81%;
+              background-position: 0, 99%;
               background-color: black;
               z-index: 9;
-              padding-left: 20%;
+              padding-left: 2%;
               caret-color: vars.$locale-bg-grey;
               color: vars.$white;
               transition: width 1.5s cubic-bezier(0.25, 0.1, 0.25, 1);
               &::placeholder {
                 opacity: 1;
               }
+            }
+          }
+          .list-container {
+            @include listItem.list-item;
+            // visibility: hidden;
+          }
+          &:hover {
+            .list-container {
+              visibility: visible;
             }
           }
         }
