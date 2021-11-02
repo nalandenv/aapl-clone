@@ -24,7 +24,7 @@
             }
           }
           #search-bar {
-            background: url("/public/assets/images/searchIcon.svg");
+            background: url("./public/assets/images/searchIcon.svg");
             background-repeat: no-repeat;
             height: 44px;
             width: 16px;
@@ -39,8 +39,8 @@
               position: absolute;
               right: 0;
               width: 100%;
-              background: url("/public/assets/images/searchIconDark.svg"),
-                url("/public/assets/images/appleIcon.svg");
+              background: url("./public/assets/images/searchIconDark.svg"),
+                url("./public/assets/images/appleIcon.svg");
               background-repeat: no-repeat;
               background-position: 17%, 81%;
               background-color: black;

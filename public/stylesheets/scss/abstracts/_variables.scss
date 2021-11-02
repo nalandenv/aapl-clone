@@ -1,18 +1,18 @@
 @font-face {
   font-family: "sfRegular";
-  src: url("/public/assets/fonts/sfRegular.woff2") format("woff2");
+  src: url("./public/assets/fonts/sfRegular.woff2") format("woff2");
 }
 @font-face {
   font-family: "sfHeavy";
-  src: url("/public/assets/fonts/sfHeavy.woff2") format("woff2");
+  src: url("./public/assets/fonts/sfHeavy.woff2") format("woff2");
 }
 @font-face {
   font-family: "sfSemiBold";
-  src: url("/public/assets/fonts/sfSemiBold.woff2") format("woff2");
+  src: url("./public/assets/fonts/sfSemiBold.woff2") format("woff2");
 }
 @font-face {
   font-family: "sfProIcons";
-  src: url("/public/assets/fonts/sfProIcons.woff2") format("woff2");
+  src: url("./public/assets/fonts/sfProIcons.woff2") format("woff2");
 }
 
 $font-reg: sfRegular;
